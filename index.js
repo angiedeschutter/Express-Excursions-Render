@@ -8,6 +8,7 @@ const { Sequelize } = require('sequelize')
 const path = require("path")
 const  bodyParser  =require( 'body-parser')
 
+
 //middleware
 app.use(express.json())
 app.use(cors())
@@ -29,7 +30,7 @@ const destinationsController = require('./controllers/destinations_controller')
 app.use('/destinations', destinationsController)
 
 const continentsController = require('./controllers/continent_controllers')
-app.use('/continent', continentsController)
+app.use('/continents', continentsController)
 
 
 
