@@ -10,7 +10,7 @@ continents.get('/:continent_name', async (req, res) => {
         let { data } = await supabase
         .from('destinations')
         .select()
-        .is('continent_name', req.params.continent_name)
+        console.log(data)
         res.send(data)
         
     } catch (Error) {
