@@ -12,7 +12,6 @@ function Destinations() {
     const getDestinations = async () => {
         try {
             const findDestinations = await fetch(`${process.env.REACT_APP_SERVER_URL}${name}`)
-            
             setDestinations(findDestinations)
         } catch (Error) {
             console.log(Error)
