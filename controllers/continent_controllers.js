@@ -9,13 +9,15 @@ continents.get('/:continent_name', async (req, res) => {
     try {
         let { data } = await supabase
         .from('destinations')
-        .select('*')
+        .select()
+        .is('continent_name', req.params.continent_name)
+        res.send(data)
         
-        console.log(data)
     } catch (Error) {
         console.log(Error)
         res.status(500).send('Oh no, could not find destinations')
     }
+    console.log(data)
 })
 
 // EXPORT
