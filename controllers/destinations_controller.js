@@ -11,15 +11,15 @@ const { supabase } = require('../supabase')
 // FIND ALL DESTINATIONS
 destinations.get('/', async (req, res) => {
     try {
-        let { data } = await supabase
+        let { data, error } = await supabase
             .from('destinations')
             .select('*')
-            console.log(data)
-           
+            
     } catch (error) {
         console.log(error)
         res.status(500).send('Oh no, could not find destinations')
     }
+    console.log(data)
 })
 
 // FIND A DESTINATION
