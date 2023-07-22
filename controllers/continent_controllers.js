@@ -13,7 +13,8 @@ continents.get('/:continent_name', async (req, res) => {
   
         let { data } = await supabase
         .from('destinations')
-        .select('*')
+        .select()
+        .eq('continent_name', 'North America')
         console.log(data)
         
    
