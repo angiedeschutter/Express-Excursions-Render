@@ -18,7 +18,9 @@ app.use(bodyParser.json())
 
 // ROOT
 app.get('/*', function(req,res){
-        res.sendFile(path.join(__dirname, 'build','index.html'))
+  res.status(200).json({
+    message: 'Welcome to Express Excusions'
+})
     })
 
 // CONTROLLERS
