@@ -27,7 +27,7 @@ const destinationsController = require('./controllers/destinations_controller')
 app.use('/destinations', destinationsController)
 
 const continentsController = require('./controllers/continent_controllers')
-app.use('/continents', continentsController)
+app.use('/continent', continentsController)
 
 
 
