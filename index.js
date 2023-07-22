@@ -19,10 +19,12 @@ app.use(bodyParser.json())
 
 // ROOT
 app.get('/', function(req,res){
-  res.status(200).json({
-    message: 'Welcome to Express Excusions'
+  let { data } = await supabase
+  .from('destinations')
+  .select('*')
+  console.log(data)
 })
-    })
+   
 
 // CONTROLLERS
 
