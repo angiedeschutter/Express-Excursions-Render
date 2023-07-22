@@ -10,7 +10,6 @@ continents.get('/:continent_name', async (req, res) => {
         .from('destinations')
         .select('*')
         console.log(data)
-        res.send(data)
         
     } catch (Error) {
         console.log(Error)

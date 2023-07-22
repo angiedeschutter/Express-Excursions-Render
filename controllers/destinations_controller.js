@@ -14,7 +14,7 @@ destinations.get('/', async (req, res) => {
         let { data, error } = await supabase
             .from('destinations')
             .select('*')
-            
+            console.log(data)
     } catch (error) {
         console.log(error)
         res.status(500).send('Oh no, could not find destinations')
