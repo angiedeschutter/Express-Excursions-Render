@@ -16,7 +16,7 @@ continents.get('/:continent_name', async (req, res) => {
     try {
         let { data } = await supabase
         .from('destinations')
-        .select()
+        .select('*')
         console.log(data)
         res.send(data)
         
