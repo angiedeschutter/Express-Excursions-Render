@@ -8,12 +8,7 @@ const { Sequelize } = require('sequelize')
 const path = require("path")
 const  bodyParser  =require( 'body-parser')
 
-const { createClient } =require('@supabase/supabase-js')
 
-const DATABASE_URL = 'https://kzpuwykecupbyqdjibud.supabase.co'
-const DATABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt6cHV3eWtlY3VwYnlxZGppYnVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg4NTU3NjgsImV4cCI6MjAwNDQzMTc2OH0.oeGSvX55KS0rCby8Ip1ZdSn5rkkswIOZLVySftlpyqo"
-
-const supabase = createClient(DATABASE_URL, DATABASE_KEY)
 //middleware
 app.use(express.json())
 app.use(cors())
@@ -24,9 +19,10 @@ app.use(bodyParser.json())
 
 // ROOT
 app.get('/', function(req,res){
-supabase.from('destinations').select('*').then(console.log)
+  res.status(200).json({
+    message: 'Welcome to Express Excusions'
 })
-
+    })
 
 // CONTROLLERS
 
