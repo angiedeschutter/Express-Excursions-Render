@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 
 // ROOT
 app.get('/', function(req,res){
-supabase.from('destinations').selectlect('*').then(console.log)
+supabase.from('destinations').select('*').then(console.log)
 })
 
 
