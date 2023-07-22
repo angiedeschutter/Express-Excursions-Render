@@ -1,0 +1,25 @@
+
+
+{
+  "development": {
+    "username": "postgres",
+    "password": "AngieSQL",
+    "database": "Express_Excursions",
+    "host": "db.kzpuwykecupbyqdjibud.supabase.co",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "AngieSQL",
+    "database": "Express_Excursions",
+    "host": "db.kzpuwykecupbyqdjibud.supabase.co",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "AngieSQL",
+    "database": "Express_Excursions",
+    "host": "db.kzpuwykecupbyqdjibud.supabase.co",
+    "dialect": "postgres"
+  }
+}
